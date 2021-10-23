@@ -76,6 +76,8 @@ public class Parser {
 			return Operation.add;
 		else if ("/".equals(value))
 			return Operation.div;
+		else if ("%".equals(value))
+			return Operation.mod;
 		else if ("-".equals(value))
 			return Operation.sub;
 		

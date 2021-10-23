@@ -32,11 +32,15 @@ public class ParserTest {
 		Calculator cal = mock(Calculator.class);
 
 		Parser parser = new Parser(cal);
-		parser.parse(new File("src/test/resources/test01.xml"));
+		parser.parse(new File("src/resources/test04.xml"));
 		
-		verify(cal).push(1.0);
-		verify(cal).push(2.0);
-		verify(cal).perform(Operation.add);
+		verify(cal).push(256);
+		verify(cal).push(13);
+		//verify(cal).perform(Operation.add);
+		verify(cal).perform(Operation.mod);
+
+		/*verify(cal).push(2);
+		verify(cal).perform(Operation.mod);*/
 
 		verifyNoMoreInteractions(cal);
 	}
