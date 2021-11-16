@@ -35,12 +35,9 @@ public class ParserTest {
 		parser.parse(new File("src/resources/test04.xml"));
 		
 		verify(cal).push(256);
-		verify(cal).push(13);
-		//verify(cal).perform(Operation.add);
-		verify(cal).perform(Operation.mod);
+		verify(cal).push(24);
 
-		/*verify(cal).push(2);
-		verify(cal).perform(Operation.mod);*/
+		verify(cal).perform(Operation.mod);
 
 		verifyNoMoreInteractions(cal);
 	}
