@@ -24,7 +24,7 @@ jobs:
         cache: maven
 
     - name: Run tests with Maven
-      run: mvn -B test --file stackCalculator/pom.xml --batch-mode
+      run: mvn -B test --file UnitTest/pom.xml --batch-mode
 
     - name: Publish Test Report
       uses: scacap/action-surefire-report@v1

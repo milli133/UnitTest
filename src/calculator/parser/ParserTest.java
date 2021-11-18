@@ -8,7 +8,6 @@ import static org.mockito.Mockito.*;
 
 import calculator.Calculator;
 import calculator.Calculator.Operation;
-import calculator.parser.Parser;
 
 public class ParserTest {
 
@@ -34,8 +33,8 @@ public class ParserTest {
 		Parser parser = new Parser(cal);
 		parser.parse(new File("src/resources/test04.xml"));
 		
-		verify(cal).push(22);
-		verify(cal).push(24);
+		verify(cal).push(256.0);
+		verify(cal).push(13.0);
 
 		verify(cal).perform(Operation.mod);
 
